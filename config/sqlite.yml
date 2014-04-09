@@ -1,0 +1,20 @@
+Default: &defaults
+  database: haskell-http-test.sqlite3
+  poolsize: 10
+
+Development:
+  <<: *defaults
+
+Testing:
+  database: haskell-http-test_test.sqlite3
+  <<: *defaults
+
+Staging:
+  database: haskell-http-test_staging.sqlite3
+  poolsize: 100
+  <<: *defaults
+
+Production:
+  database: haskell-http-test_production.sqlite3
+  poolsize: 100
+  <<: *defaults
